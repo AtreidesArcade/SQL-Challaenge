@@ -1,6 +1,6 @@
 -- Data Analysis --
 -- List the following details of each employee: employee number, last name, first name, sex, and salary.
-SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary
+SELECT e.emp_no, e.last_name, e.first_name, e.gender, s.salary
 FROM employees e
 JOIN salaries s
 ON e.emp_no = s.emp_no;
@@ -26,7 +26,7 @@ JOIN departments d
 ON dep.dept_no = d.dept_no;
 
 -- 5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
-SELECT first_name, last_name,sex
+SELECT first_name, last_name, gender
 FROM employees
 WHERE first_name = 'Hercules'
 AND last_name LIKE 'B%';
